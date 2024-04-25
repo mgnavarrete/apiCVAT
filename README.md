@@ -1,5 +1,5 @@
 
-# Sincronización de CVAT con Platafroma Antenas de ADENTU
+# Sincronización de CVAT con Plataforma Antenas de ADENTU
 
 Este script tiene como objetivo automatizar tareas relacionadas con el servicio de anotación y almacenamiento en la nube de CVAT y AWS S3. El programa puede crear nuevas tareas en CVAT, obtener datos relacionados con esas tareas, y subir archivos y resultados a un bucket de Amazon S3. El script admite dos procesos diferentes, definidos por el argumento `proceso`: `new_task` y `get_data`.
 
