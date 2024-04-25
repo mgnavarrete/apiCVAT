@@ -1,5 +1,5 @@
 
-# Sincronizacion de CVAT con Platafroma Antenas de ADENTU
+# Sincronización de CVAT con Platafroma Antenas de ADENTU
 
 Este script tiene como objetivo automatizar tareas relacionadas con el servicio de anotación y almacenamiento en la nube de CVAT y AWS S3. El programa puede crear nuevas tareas en CVAT, obtener datos relacionados con esas tareas, y subir archivos y resultados a un bucket de Amazon S3. El script admite dos procesos diferentes, definidos por el argumento `proceso`: `new_task` y `get_data`.
 
@@ -46,5 +46,23 @@ pip install -r requirements.txt
    Asegúrate de tener credenciales válidas para CVAT y AWS S3. El script necesita información como el ID de acceso, la clave secreta y el nombre del bucket para interactuar con estos servicios.
 
 4. **Advertencias**:
+
+## Configuración del Archivo .env
+
+Antes de ejecutar el script, asegúrate de tener un archivo `.env` con las siguientes variables configuradas:
+```bash
+# Parámetros de conexión con S3
+AWS_ACCESS_KEY_ID = 'AWS_ACCESS_KEY_ID'
+AWS_SECRET_ACCESS_KEY = 'AWS_SECRET_ACCESS_KEY'
+AWS_DEFAULT_REGION = 'AWS_DEFAULT_REGION'
+AWS_BUCKET = 'AWS_BUCKET'
+
+# Parámetros de conexión con CVAT
+CVAT_HOST = 'CVAT_HOST'
+CVAT_USERNAME = 'CVAT_USERNAME'
+CVAT_PASSWORD = 'CVAT_PASSWORD'
+```
+
+Asegúrate de que el archivo `.env` esté en el mismo directorio que el script y que las credenciales sean correctas antes de ejecutar el script.
    - Asegúrate de tener los permisos adecuados para crear tareas en CVAT y subir datos a AWS S3.
    - La manipulación incorrecta de datos puede resultar en la pérdida de información o problemas de seguridad.
