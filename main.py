@@ -30,12 +30,12 @@ AWS_DEFAULT_REGION = os.getenv('AWS_DEFAULT_REGION')
 AWS_BUCKET = os.getenv('AWS_BUCKET')
 
 # Parámetros de conexión
-host = "http://3.225.205.173:8080"
-username = os.getenv('CVAT_USERNAME')
-password = os.getenv('CVAT_PASSWORD')
+CVAT_HOST = os.getenv('CVAT_HOST')
+CVAT_USERNAME = os.getenv('CVAT_USERNAME')
+CVAT_PASSWORD = os.getenv('CVAT_PASSWORD')
 
 # Conectar a CVAT
-client = connect_to_cvat(host, username, password)
+client = connect_to_cvat(CVAT_HOST, CVAT_USERNAME, CVAT_PASSWORD)
 
 if proceso == 'new_task':
     print("Proceso por implementar")
@@ -52,7 +52,7 @@ if proceso == 'get_data':
     task = find_task(client, task_name)
 
     # Obtener el dataset con lables e imagenes
-    get_dataset(task, username, password)
+    get_dataset(task, CVAT_HOST, CVAT_USERNAME, CVAT_PASSWORD)
 
     # Correr unzip para descomprimir el archivo y que no haga print de lo que hace
     print(f"Descomprimiendo el archivo {task_name}.zip...")

@@ -25,12 +25,12 @@ def find_task(client, task_name):
         raise ValueError(f"No se encontró la tarea con el nombre '{task_name}'")
     return tasks[0]
 
-def get_dataset(task, user, passw):
+def get_dataset(task, CVAT_HOST, CVAT_USERNAME, CVAT_PASSWORD):
     """Obtiene el nombre del archivo de imagen para un marco específico."""
     configuration = Configuration(
-    host = "http://3.225.205.173:8080",
-    username = user,
-    password = passw,
+    host = CVAT_HOST,
+    username = CVAT_USERNAME,
+    password = CVAT_PASSWORD,
 )
     with ApiClient(configuration) as api_client:
         # Export a task as a dataset
