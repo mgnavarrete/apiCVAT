@@ -26,7 +26,7 @@ pip install -r requirements.txt
      ```
      Donde `[task_name]` es el nombre de la tarea a crear.
 
-   - Para obtener datos de una tarea existente y subirlos a AWS S3, ejecuta:
+   - Para obtener las labels, las imagenes con bbox y el json del reporte de una tarea existente y subirlos a AWS S3, ejecuta:
      ```bash
      python3 main.py get_data [task_name]
      ```
