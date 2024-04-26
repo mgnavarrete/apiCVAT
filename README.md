@@ -3,7 +3,7 @@
 
 Este script tiene como objetivo automatizar tareas relacionadas con el servicio de anotación y almacenamiento en la nube de CVAT y AWS S3. El programa puede crear nuevas tareas en CVAT, obtener datos relacionados con esas tareas, y subir archivos y resultados a un bucket de Amazon S3. El script admite dos procesos diferentes, definidos por el argumento `proceso`: `new_task` y `get_data`.
 
-- `new_task`: Crea una nueva tarea en el servidor CVAT con el nombre proporcionado.
+- `new_task`: Crea una nueva tarea en el servidor CVAT con el nombre proporcionado. (Falta por implementar)
 - `get_data`: Obtiene datos de la tarea existente y los sube a un bucket de Amazon S3.
 
 ## Dependencias
